@@ -8,8 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.TimePicker;
 
 import java.util.Calendar;
 
@@ -24,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        show = findViewById(R.id.btn_show);
+        show = findViewById(R.id.btnDone);
 
 
         show.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startAlarm(true,true);
+                startAlarm(true,false);
                 System.out.println("DONE");
             }
         });
@@ -57,4 +60,48 @@ public class MainActivity extends AppCompatActivity {
         else
             manager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_DAY, pendingIntent);
     }
+
+    private void createHabit(){
+        TextView hName;
+        TextView hDesc;
+        TimePicker picker;
+        Button btn;
+        Habit habit = new Habit();
+        String habitName;
+        String habitDesc;
+
+        hName = findViewById(R.id.HabitName);
+        hDesc = findViewById(R.id.HabitDescription);
+        picker = findViewById(R.id.timePicker);
+        btn = findViewById(R.id.btnDone);
+        habitName  = hName.getText().toString();
+        habitDesc = hDesc.getText().toString();
+
+        btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                int hour, min;
+                String AM_PM;
+                hour = picker.getHour();
+                min = picker.getMinute();
+
+                if(hour > 12) {
+                    AM_PM = "PM";
+                    hour = hour - 12;
+                }
+                else
+                {
+                    AM_PM="AM";
+                }
+                Log.d("Hour is ", String.valueOf(hour) );
+                Log.d( " minute is ", String.valueOf(min));
+
+                habit.setHabitName(habitName);
+                habit.setHabitDesc(habitDesc);
+                habit.setHour(hour);
+                habit.setMinute(min);
+            }
+        });
+    }
+
 }
