@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Habitree</string>
+    <string name="app_name">activitylifecycle</string>
+    <color name="habitree">#003a3d</color>
+    <color name="beautybush">#EEC3BD</color>
+    <color name="juniper">#718C8C</color>
+    <color name="sirocco">#7B8484</color>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
