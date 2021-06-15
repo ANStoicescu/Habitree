@@ -6,11 +6,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.SystemClock;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -22,13 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     Button show;
 
-    public static String MY_PREFS_NAME= "nameOfSharedPreferences";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         show = findViewById(R.id.done);
 
         show.setOnClickListener(new View.OnClickListener() {

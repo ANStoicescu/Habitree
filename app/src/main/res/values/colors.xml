@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="habitree">#003a3d</color>
+    <color name="beautybush">#EEC3BD</color>
+    <color name="juniper">#718C8C</color>
+    <color name="sirocco">#7B8484</color>
 </resources>
