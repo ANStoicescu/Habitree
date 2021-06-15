@@ -1,4 +1,4 @@
-package com.example.habitree;
+package com.habitree;
 
 public class Habit {
     private String habitName;

@@ -1,4 +1,4 @@
-package com.example.habitree;
+package com.habitree.notifications;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -7,6 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
+
+import com.habitree.notifications.AlarmNotificationReceiver;
 
 import java.util.Calendar;
 
@@ -40,7 +42,7 @@ public class MyService extends Service {
         calendar.set(Calendar.HOUR_OF_DAY,18);
         calendar.set(Calendar.MINUTE,45);
 
-        myIntent = new Intent(this,AlarmNotificationReceiver.class);
+        myIntent = new Intent(this, AlarmNotificationReceiver.class);
         pendingIntent = PendingIntent.getBroadcast(this,0,myIntent,0);
 
 
