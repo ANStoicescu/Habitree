@@ -1,4 +1,4 @@
-package com.example.habitree;
+package com.example.habi;
 
 import org.junit.Test;
 
