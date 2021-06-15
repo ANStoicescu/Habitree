@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "720797704640",
+    "project_id": "habitree-55384",
+    "storage_bucket": "habitree-55384.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720797704640:android:ed19b2e3447667be372825",
+        "android_client_info": {
+          "package_name": "com.example.habitree"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720797704640-hvimremsgpvnd0chi24dm5j8j3rguu7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAgPa1dM3nzdbnBvYb3R7M-tBly4n7G-A0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720797704640-hvimremsgpvnd0chi24dm5j8j3rguu7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
