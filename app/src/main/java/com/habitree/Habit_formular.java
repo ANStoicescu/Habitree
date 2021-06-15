@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import com.habitree.models.Habit;
+
 public class Habit_formular extends AppCompatActivity {
 
     @Override

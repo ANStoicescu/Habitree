@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Habitree">
-        <activity android:name=".Home" />
+        <activity android:name=".PostJournalActivity"></activity>
+        <activity android:name=".accounts.CreateAccountActivity" />
+        <activity android:name=".accounts.LoginActivity" />
+        <activity android:name=".HomeActivity" />
         <activity android:name=".Habit_formular" />
         <activity android:name=".MainActivity">
             <intent-filter>
