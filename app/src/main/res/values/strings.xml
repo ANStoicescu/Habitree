@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">Habitree</string>
+    <string name="app_name">Habi</string>
+    <string name="title_todo">ToDo</string>
+    <string name="title_add">Add Habit</string>
+    <string name="title_habit">Habit</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login_text">Login</string>
+    <string name="or_text">Or</string>
+    <string name="create_text">Create Account</string>
+    <string name="username_hint">Username</string>
+    <string name="post_title" />
+    <string name="thoughts">Your Thoughts</string>
+    <string name="save_button">Save</string>
+    <string name="title_hint">Title</string>
+    <string name="menu_title">Add Thoughts</string>
+    <string name="signout">Signout</string>
+    <string name="no_thoughts_hint">Write a Journal Entry by clicking the \"+\" icon above</string>
 </resources>
