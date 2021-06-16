@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.habi.ui.home.HomeFragment"
+        android:name="com.habitree.ui.HomeFragment"
         android:label="@string/title_todo"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.example.habi.ui.dashboard.DashboardFragment"
+        android:name="com.habitree.ui.DashboardFragment"
         android:label="@string/title_add"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.habi.ui.notifications.NotificationsFragment"
+        android:name="com.habitree.ui.NotificationsFragment"
         android:label="@string/title_habit"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
