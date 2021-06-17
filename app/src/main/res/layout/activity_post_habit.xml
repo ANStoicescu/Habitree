@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="18dp"
-    tools:context=".Habit_formular">
+    tools:context=".PostHabitActivity">
 
     <TextView
         android:id="@+id/textView"

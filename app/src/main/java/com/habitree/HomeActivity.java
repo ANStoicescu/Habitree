@@ -9,11 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.fragment.NavHostFragment;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,7 +22,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
-import com.habitree.databinding.ActivityMainBinding;
 import com.habitree.models.Journal;
 import com.habitree.ui.JournalRecyclerAdapter;
 import com.habitree.util.JournalApi;
@@ -56,22 +50,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        getSupportActionBar().hide();
-        /*binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
-
-        */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.bringToFront();
         bottomNavigationView.setSelectedItemId(R.id.home);
@@ -81,18 +60,27 @@ public class HomeActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.home:
                         return true;
-                    case R.id.add_habit:
+                    case R.id.habits:
                         startActivity(new Intent(getApplicationContext(),
-                                Habit_formular.class));
+                                HabitActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.calendar:
+                    case R.id.add_habit:
                         startActivity(new Intent(getApplicationContext(),
-                                CalendarActivity.class));
+                                PostHabitActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.add_journal:
+                        startActivity(new Intent(getApplicationContext(),
+                                PostJournalActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(),
+                                SettingsActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                 }
-                System.out.println("Nu am gasit!");
                 return false;
             }
         });

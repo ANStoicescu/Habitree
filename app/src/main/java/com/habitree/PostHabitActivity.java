@@ -16,14 +16,15 @@ import com.habitree.models.Habit;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Habit_formular extends AppCompatActivity {
+public class PostHabitActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_habit_formular);
+        setContentView(R.layout.activity_post_habit);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.bringToFront();
         bottomNavigationView.setSelectedItemId(R.id.add_habit);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -34,15 +35,24 @@ public class Habit_formular extends AppCompatActivity {
                                 HomeActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
-                    case R.id.add_habit:
+                    case R.id.habits:
                         return true;
-                    case R.id.calendar:
+                    case R.id.add_habit:
                         startActivity(new Intent(getApplicationContext(),
-                                CalendarActivity.class));
+                                PostHabitActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.add_journal:
+                        startActivity(new Intent(getApplicationContext(),
+                                PostJournalActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(),
+                                SettingsActivity.class));
                         overridePendingTransition(0, 0);
                         return true;
                 }
-                System.out.println("Nu am gasit!");
                 return false;
             }
         });
