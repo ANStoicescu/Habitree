@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                         LoginActivity.class));
 
                 //testing the alarm-notification
-                startAlarm(true,false);
+                startAlarm(true,true);
                 System.out.println("DONE");
                 finish();
             }
@@ -114,8 +114,8 @@ public class MainActivity extends AppCompatActivity {
 
         // SET TIME HERE
         Calendar calendar= Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY,21);
-        calendar.set(Calendar.MINUTE,32);
+        calendar.set(Calendar.HOUR_OF_DAY,23);
+        calendar.set(Calendar.MINUTE,18);
 
 
         myIntent = new Intent(MainActivity.this, AlarmNotificationReceiver.class);
