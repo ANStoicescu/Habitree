@@ -1,4 +1,4 @@
-package com.example.habitree;
+package com.habitree.notifications;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -12,6 +12,9 @@ import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.NotificationCompat;
+
+import com.habitree.R;
+import com.habitree.MainActivity;
 
 import static android.app.PendingIntent.FLAG_ONE_SHOT;
 

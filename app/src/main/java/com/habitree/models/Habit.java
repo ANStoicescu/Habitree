@@ -1,4 +1,4 @@
-package com.example.habitree;
+package com.habitree.models;
 
 public class Habit {
     private String habitName;
