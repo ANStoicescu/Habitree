@@ -1,2 +1,2 @@
-rootProject.name = "Habitree"
 include ':app'
+rootProject.name = "activitylifecycle"

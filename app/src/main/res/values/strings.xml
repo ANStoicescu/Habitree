@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Habi</string>
     <string name="title_todo">ToDo</string>
     <string name="title_add">Add Habit</string>
@@ -16,4 +17,5 @@
     <string name="menu_title">Add Thoughts</string>
     <string name="signout">Signout</string>
     <string name="no_thoughts_hint">Write a Journal Entry by clicking the \"+\" icon above</string>
+
 </resources>
