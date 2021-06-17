@@ -25,25 +25,29 @@ public class Habit_formular extends AppCompatActivity {
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.add_habit);
-        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onNavigationItemReselected(@NotNull MenuItem menuItem) {
-                switch(menuItem.getItemId()){
+            public boolean onNavigationItemSelected(@androidx.annotation.NonNull @NotNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(),
                                 HomeActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
+                        return true;
                     case R.id.add_habit:
-                        startActivity(new Intent(getApplicationContext(),
-                                Habit_formular.class));
-                        overridePendingTransition(0,0);
+                        return true;
                     case R.id.calendar:
                         startActivity(new Intent(getApplicationContext(),
                                 CalendarActivity.class));
-                        overridePendingTransition(0,0);
+                        overridePendingTransition(0, 0);
+                        return true;
                 }
+                System.out.println("Nu am gasit!");
+                return false;
             }
         });
+
+        createHabit();
     }
 
     private void createHabit(){
