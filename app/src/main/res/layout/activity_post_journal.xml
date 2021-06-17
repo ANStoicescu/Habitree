@@ -18,36 +18,26 @@
         android:src="@drawable/image_tree"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/post_username_textview"
-        android:layout_width="99dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Gina"
+        android:layout_width="90dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Name"
+        android:background="#718C8C"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#EEC3BD"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/postCameraButton" />
-
-    <TextView
-        android:id="@+id/post_date_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Today"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.071"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/post_username_textview" />
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/postCameraButton"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/postCameraButton"
@@ -59,34 +49,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/post_imageView"
-        app:layout_constraintVertical_bias="0.538"
+        app:layout_constraintVertical_bias="0.139"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <EditText
+        android:gravity="center"
+        android:background="#718C8C"
+        android:textColor="#EEC3BD"
         android:id="@+id/post_title_et"
         android:layout_width="379dp"
         android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/input_outline"
         android:ems="10"
         android:hint="@string/title_hint"
+        android:textColorHint ="#EEC3BD"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/post_imageView" />
 
     <EditText
+        android:gravity="center"
+        android:background="#718C8C"
+        android:textColor="#EEC3BD"
         android:id="@+id/post_description_et"
         android:layout_width="379dp"
         android:layout_height="118dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/input_outline"
         android:ems="10"
         android:hint="@string/thoughts"
+        android:textColorHint ="#EEC3BD"
         android:inputType="textMultiLine"
         android:padding="15dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
@@ -101,8 +97,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
         android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/post_save_journal_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,17 +106,18 @@
 
     <Button
         android:id="@+id/post_save_journal_button"
-        android:layout_width="378dp"
-        android:layout_height="51dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/transparent"
+        android:layout_marginBottom="76dp"
+        android:backgroundTint="@color/juniper"
         android:text="@string/save_button"
+
         android:textColor="@color/beautybush"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
