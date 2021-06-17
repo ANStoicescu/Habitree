@@ -156,7 +156,6 @@ public class CreateAccountActivity extends AppCompatActivity {
 
                                                             }
                                                         });
-
                                             }
                                         })
                                         .addOnFailureListener(new OnFailureListener() {
