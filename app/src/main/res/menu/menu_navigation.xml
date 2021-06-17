@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"/>
+
+    <item
+        android:id="@+id/habits"
+        android:title="Habits"
+        android:icon="@drawable/habits"/>
+
+    <item
+        android:id="@+id/add_habit"
+        android:title="New habit"
+        android:icon="@drawable/addhabit"/>
+
+    <item
+        android:id="@+id/add_journal"
+        android:title="New journal"
+        android:icon="@drawable/addjournal"/>
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settings"/>
+
+</menu>

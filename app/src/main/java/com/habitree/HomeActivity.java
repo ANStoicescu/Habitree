@@ -9,10 +9,6 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,10 +22,11 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
-import com.habitree.databinding.ActivityMainBinding;
 import com.habitree.models.Journal;
 import com.habitree.ui.JournalRecyclerAdapter;
 import com.habitree.util.JournalApi;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,28 +45,46 @@ public class HomeActivity extends AppCompatActivity {
 
     private CollectionReference collectionReference = db.collection("Journal");
     private TextView noJournalEntry;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        getSupportActionBar().hide();
-        /*binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.bringToFront();
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@androidx.annotation.NonNull @NotNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        return true;
+                    case R.id.habits:
+                        startActivity(new Intent(getApplicationContext(),
+                                HabitActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.add_habit:
+                        startActivity(new Intent(getApplicationContext(),
+                                PostHabitActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.add_journal:
+                        startActivity(new Intent(getApplicationContext(),
+                                PostJournalActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(),
+                                SettingsActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
-        */
         Objects.requireNonNull(getSupportActionBar()).setElevation(0);
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
@@ -81,38 +96,6 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.action_add:
-                //Take users to add Journal
-                if (user != null && firebaseAuth != null) {
-                    startActivity(new Intent(HomeActivity.this,
-                            PostJournalActivity.class));
-                    //finish();
-                }
-                break;
-            case R.id.action_signout:
-                //sign user out!
-                if (user != null && firebaseAuth != null) {
-                    firebaseAuth.signOut();
-
-                    startActivity(new Intent(HomeActivity.this,
-                            MainActivity.class));
-                    //finish();
-                }
-                break;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override

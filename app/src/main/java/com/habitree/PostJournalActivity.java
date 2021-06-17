@@ -7,6 +7,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,6 +31,8 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.habitree.models.Journal;
 import com.habitree.util.JournalApi;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;
 import java.util.Objects;
@@ -63,6 +67,41 @@ public class PostJournalActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_journal);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.bringToFront();
+        bottomNavigationView.setSelectedItemId(R.id.add_journal);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@androidx.annotation.NonNull @NotNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),
+                                HomeActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.habits:
+                        startActivity(new Intent(getApplicationContext(),
+                                HabitActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.add_habit:
+                        startActivity(new Intent(getApplicationContext(),
+                                PostHabitActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.add_journal:
+                        return true;
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(),
+                                SettingsActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+            }
+        });
+
         Objects.requireNonNull(getSupportActionBar()).setElevation(0);
 
         storageReference = FirebaseStorage.getInstance().getReference();

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
     package="com.habitree">
+
     <uses-permission android:name="android.permission.INTERNET" />
   
     <application
@@ -12,11 +13,14 @@
         android:supportsRtl="true"
 
         android:theme="@style/Theme.Habitree">
-        <activity android:name=".PostJournalActivity"></activity>
+        <activity android:name=".HabitActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".PostJournalActivity" />
         <activity android:name=".accounts.CreateAccountActivity" />
         <activity android:name=".accounts.LoginActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".Habit_formular" />
+        <activity android:name=".PostHabitActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
