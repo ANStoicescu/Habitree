@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Habitree">
-        <activity android:name=".PostJournalActivity"></activity>
+        <activity android:name=".CalendarActivity"></activity>
+        <activity android:name=".PostJournalActivity" />
         <activity android:name=".accounts.CreateAccountActivity" />
         <activity android:name=".accounts.LoginActivity" />
         <activity android:name=".HomeActivity" />

@@ -32,6 +32,8 @@ import com.habitree.models.Journal;
 import com.habitree.ui.JournalRecyclerAdapter;
 import com.habitree.util.JournalApi;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -49,7 +51,6 @@ public class HomeActivity extends AppCompatActivity {
 
     private CollectionReference collectionReference = db.collection("Journal");
     private TextView noJournalEntry;
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +72,31 @@ public class HomeActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(binding.navView, navController);
 
         */
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+            @Override
+            public void onNavigationItemReselected(@NotNull MenuItem menuItem) {
+                switch(menuItem.getItemId()){
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(),
+                                HomeActivity.class));
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.add_habit:
+                        startActivity(new Intent(getApplicationContext(),
+                                Habit_formular.class));
+                        overridePendingTransition(0,0);
+                        return;
+                    case R.id.calendar:
+                        startActivity(new Intent(getApplicationContext(),
+                                CalendarActivity.class));
+                        overridePendingTransition(0,0);
+                        return;
+                }
+                System.out.println("Nu am gasit!");
+            }
+        });
 
         Objects.requireNonNull(getSupportActionBar()).setElevation(0);
         firebaseAuth = FirebaseAuth.getInstance();
