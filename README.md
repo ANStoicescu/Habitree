@@ -5,12 +5,9 @@ Proiectul acesta a fost realizat pentru materia "Metode de Dezvoltare Software".
 **Descrierea proietului**<br/>
 Proietul este o aplicatie Android de habit tracker ce permite crearea unui cont si logare, crearea de pagini din jurnal, crearea unui habit nou, afiseaza toate habit-urile utilizatorului si da track la ce habit-uri a indeplinit, afiseaza continutul jurnalului. Pentru toate aceste interogari, aplicatia foloseste de o baza de date Firebase.
 
-**Demoul aplicatiei**<br/>
-Demoul aplicatiei a fost incarcat pe Youtube si se poate gasi aici:
-Backlog & User Stories
 Backlog-ul poate fi consultat [aici](https://github.com/Deadlykittenn/Habitree/issues)
 
-**User Stories:**
+# User Stories
 1. "De curand mi-am schimbat telefonul si as vrea sa-mi transfer datele de pe telefonul vechi." -> create account & login page 
 2. "ar fi folositor sa adaug in aplicatie si gandurile mele din ziua respectiva, ar ajuta mult cu latura de dezvoltare si tracking a habit-urilor"-> journal
 3. "Vreau sa ma pot conecta cu un alt cont." -> buton de sign out
@@ -22,13 +19,24 @@ Backlog-ul poate fi consultat [aici](https://github.com/Deadlykittenn/Habitree/i
 9. "Iubesc faptul ca aplicatia este ca default in dark mode si ca nu a trebuit sa umblu prin ea dupa setarea de dark mode."
 10. "Ca de obicei nu tin minte cand am facut un lucru asa ca as vrea sa pot vedea la fiecare pagina din jurnal ziua la care am adaugat-o." -> am adaugat timpul la care a fost introdus o pagina din jurnal
 
-**Colaboratori:**
-- Stoicescu Adrian Nicolae
-- Lazar Stefania Daniela
-- Oprea Ana-Maria
-
-**UML**
+# UML
 ![image](https://user-images.githubusercontent.com/80201759/122564765-670f1400-d04e-11eb-8497-46f367b80a3c.png)
 
-**Design and Flow**
+# Source control
 
+[Branch creation , Merge/rebase](https://github.com/Deadlykittenn/Habitree/pulse)
+[Commits](https://github.com/Deadlykittenn/Habitree/commits/main)
+
+# Bug reporting
+ 
+ Bugurile le gasim [aici](https://github.com/Deadlykittenn/Habitree/issues?q=label%3Abug+is%3Aclosed)
+ 
+# Build tool 
+
+Am folosit Gradle si Android Studio. Am creat si un apk, acesta poate fi gasit [aici]().
+
+
+# Membrii
+- [Stoicescu Adrian Nicolae](https://github.com/Deadlykittenn)
+- [Lazar Stefania Daniela](https://github.com/stefanialazar)
+- [Oprea Ana-Maria](https://github.com/ana-oprea)
