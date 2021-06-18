@@ -33,10 +33,13 @@ Backlog-ul poate fi consultat [aici](https://github.com/Deadlykittenn/Habitree/i
  
 # Build tool 
 
-Am folosit Gradle si Android Studio. Am creat si un apk, acesta poate fi gasit [aici]().
+Am folosit Gradle si Android Studio. Am creat si un apk, acesta poate fi gasit [aici](https://drive.google.com/drive/folders/1ew3rVrK0P9hzaQ-x3PfQneZXk-inLP82?usp=sharing).
 
 
 # Membrii
 - [Stoicescu Adrian Nicolae](https://github.com/Deadlykittenn)
 - [Lazar Stefania Daniela](https://github.com/stefanialazar)
 - [Oprea Ana-Maria](https://github.com/ana-oprea)
+
+# Link de YouTube pentru prezentarea proiectului
+Dati click [aici](https://www.youtube.com/watch?v=_S_2K58zVRQ)
