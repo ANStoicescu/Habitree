@@ -23,7 +23,7 @@ Backlog-ul poate fi consultat [aici](https://github.com/Deadlykittenn/Habitree/i
 10. "Ca de obicei nu tin minte cand am facut un lucru asa ca as vrea sa pot vedea la fiecare pagina din jurnal ziua la care am adaugat-o." -> am adaugat timpul la care a fost introdus o pagina din jurnal
 
 **Colaboratori:**
- -Stoicescu Adrian Nicolae
- -Lazar Stefania Daniela
- -Oprea Ana-Maria
+- Stoicescu Adrian Nicolae
+- Lazar Stefania Daniela
+- Oprea Ana-Maria
 
