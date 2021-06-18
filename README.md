@@ -2,10 +2,10 @@
 Proiect MDS
 Proiectul acesta a fost realizat pentru materia "Metode de Dezvoltare Software".
 
-**Descrierea proietului** 
+**Descrierea proietului**<br/>
 Proietul este o aplicatie Android de habit tracker ce permite crearea unui cont si logare, crearea de pagini din jurnal, crearea unui habit nou, afiseaza toate habit-urile utilizatorului si da track la ce habit-uri a indeplinit, afiseaza continutul jurnalului. Pentru toate aceste interogari, aplicatia foloseste de o baza de date Firebase.
 
-**Demoul aplicatiei**
+**Demoul aplicatiei**<br/>
 Demoul aplicatiei a fost incarcat pe Youtube si se poate gasi aici:
 Backlog & User Stories
 Backlog-ul poate fi consultat [aici](https://github.com/Deadlykittenn/Habitree/issues)
@@ -26,4 +26,9 @@ Backlog-ul poate fi consultat [aici](https://github.com/Deadlykittenn/Habitree/i
 - Stoicescu Adrian Nicolae
 - Lazar Stefania Daniela
 - Oprea Ana-Maria
+
+**UML**
+![image](https://user-images.githubusercontent.com/80201759/122564765-670f1400-d04e-11eb-8497-46f367b80a3c.png)
+
+**Design and Flow**
 
