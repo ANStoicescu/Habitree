@@ -1,10 +1,10 @@
 package com.habitree.models;
 
 public class Habit {
+    private String userId;
+    private String userName;
     private String habitName;
     private String habitDesc;
-    private int hour;
-    private int minute;
 
     public String getHabitName() {
         return habitName;
@@ -22,34 +22,31 @@ public class Habit {
         this.habitDesc = habitDesc;
     }
 
-    public int getHour() {
-        return hour;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setHour(int hour) {
-        this.hour = hour;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public int getMinute() {
-        return minute;
+    public Habit() { //for firestore
     }
 
-    public void setMinute(int minute) {
-        this.minute = minute;
+    public String getUserName() {
+        return userName;
     }
 
-    public Habit() {
-        this.habitName = "";
-        this.habitDesc = "";
-        this.hour = 0;
-        this.minute = 0;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public Habit(String habitName, String habitDesc, int hour, int minute) {
+
+    public Habit(String habitName, String habitDesc, String userId, String userName) {
         this.habitName = habitName;
         this.habitDesc = habitDesc;
-        this.hour = hour;
-        this.minute = minute;
+        this.userId = userId;
+        this.userName = userName;
     }
 }
 

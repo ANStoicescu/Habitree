@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/habit_title_list"
+            android:padding="10dp"
+            android:background="@color/juniper"
+            android:text="Title"
+            android:textColor="@color/beautybush"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/habit_desc_list"
+            android:padding="10dp"
+            android:text="Description"
+            android:background="@color/juniper"
+            android:textColor="@color/beautybush"
+            android:textSize="18sp"
+            android:paddingTop="15dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:textStyle="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

@@ -99,6 +99,38 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.action_add:
+                //Take users to add Journal
+                if (user != null && firebaseAuth != null) {
+                    startActivity(new Intent(HomeActivity.this,
+                            PostJournalActivity.class));
+                    //finish();
+                }
+                break;
+            case R.id.action_signout:
+                //sign user out!
+                if (user != null && firebaseAuth != null) {
+                    firebaseAuth.signOut();
+
+                    startActivity(new Intent(HomeActivity.this,
+                            MainActivity.class));
+                    //finish();
+                }
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     protected void onStart() {
         super.onStart();
 
