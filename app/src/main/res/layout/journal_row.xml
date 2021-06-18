@@ -10,13 +10,14 @@
     <LinearLayout
         android:orientation="horizontal"
         android:elevation="10dp"
-        android:background="@color/centerGColor"
+        android:background="@color/juniper"
         android:alpha="0.8"
         android:gravity="end"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
+            android:textColor="@color/beautybush"
             android:id="@+id/journal_row_username"
             android:text="Gina"
             android:padding="3dp"
@@ -38,7 +39,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/juniper">
 
         <ImageView
             android:id="@+id/journal_image_list"
@@ -50,6 +52,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:textColor="@color/beautybush"
             android:id="@+id/journal_title_list"
             android:padding="10dp"
             android:text="Title"
@@ -59,6 +62,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:textColor="@color/beautybush"
             android:id="@+id/journal_thought_list"
             android:padding="10dp"
             android:text="Thoughts..."
@@ -71,6 +75,7 @@
             android:layout_height="wrap_content" />
 
         <TextView
+            android:textColor="@color/beautybush"
             android:id="@+id/journal_timestamp_list"
             android:padding="5dp"
             android:text="Date created"

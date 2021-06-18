@@ -15,37 +15,46 @@
         android:visibility="gone" />
 
     <LinearLayout
+        android:gravity="center"
         android:id="@+id/email_login_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <AutoCompleteTextView
+            android:gravity="center"
             android:id="@+id/email"
-            android:layout_width="match_parent"
+            android:layout_width="295dp"
             android:layout_height="wrap_content"
+            android:background="@color/juniper"
             android:hint="@string/email_hint"
             android:inputType="textEmailAddress"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:textColorHint="@color/beautybush"
+            android:textColor="@color/beautybush"/>
 
         <EditText
+            android:gravity="center"
             android:id="@+id/password"
-            android:layout_width="match_parent"
+            android:layout_width="296dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:background="@color/juniper"
             android:hint="@string/password_hint"
             android:inputType="textPassword"
-            android:maxLines="1" />
+            android:maxLines="1"
+            android:textColorHint="@color/beautybush"
+            android:textColor="@color/beautybush"/>
 
 
         <Button
             android:id="@+id/email_sign_in_button"
-            android:layout_width="match_parent"
+            android:layout_width="127dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:background="@color/beautybush"
+            android:backgroundTint="@color/juniper"
             android:text="Login"
-            android:textColor="?attr/colorAccent"
+            android:textColor="@color/beautybush"
             android:textStyle="bold" />
 
         <TextView
@@ -59,12 +68,11 @@
 
         <Button
             android:id="@+id/create_acct_button_login"
-            android:layout_width="match_parent"
+            android:layout_width="126dp"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-
+            android:backgroundTint="@color/juniper"
             android:text="Create Account"
-            android:textColor="?attr/colorAccent"
+            android:textColor="@color/beautybush"
             android:textStyle="bold" />
 
     </LinearLayout>

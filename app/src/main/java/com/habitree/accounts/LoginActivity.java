@@ -27,8 +27,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.habitree.HomeActivity;
 import com.habitree.R;
-import com.habitree.accounts.CreateAccountActivity;
-import com.habitree.util.JournalApi;
+import com.habitree.util.Api;
 
 import java.util.Objects;
 
@@ -113,9 +112,9 @@ public class LoginActivity extends AppCompatActivity {
 
                                                 progressBar.setVisibility(View.INVISIBLE);
                                                 for (QueryDocumentSnapshot snapshot : queryDocumentSnapshots) {
-                                                    JournalApi journalApi = JournalApi.getInstance();
-                                                    journalApi.setUsername(snapshot.getString("username"));
-                                                    journalApi.setUserId(snapshot.getString("userId"));
+                                                    Api api = Api.getInstance();
+                                                    api.setUsername(snapshot.getString("username"));
+                                                    api.setUserId(snapshot.getString("userId"));
 
                                                     //Go to ListActivity
                                                     startActivity(new Intent(LoginActivity.this,

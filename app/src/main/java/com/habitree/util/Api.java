@@ -2,19 +2,18 @@ package com.habitree.util;
 
 import android.app.Application;
 
-public class HabitApi extends Application {
+public class Api extends Application {
     private String username;
     private String userId;
-    private static HabitApi instance;
+    private static Api instance;
 
-    public static HabitApi getInstance() {
+    public static Api getInstance() {
         if (instance == null)
-            instance = new HabitApi();
+            instance = new Api();
         return instance;
-
     }
 
-    public HabitApi(){}
+    public Api(){}
 
 
     public String getUsername() {

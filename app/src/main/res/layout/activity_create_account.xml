@@ -20,18 +20,25 @@
         android:id="@+id/acct_login_form"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <EditText
+            android:gravity="center"
+            android:background="@color/juniper"
             android:id="@+id/username_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/username_hint"
+            android:textColorHint="@color/beautybush"
             android:inputType="textPersonName"
             android:maxLines="1"
             android:paddingBottom="16dp" />
 
         <AutoCompleteTextView
+            android:gravity="center"
+            android:background="@color/juniper"
+            android:textColorHint="@color/beautybush"
             android:id="@+id/email_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,6 +48,9 @@
             android:maxLines="1" />
 
         <EditText
+            android:gravity="center"
+            android:background="@color/juniper"
+            android:textColorHint="@color/beautybush"
             android:id="@+id/password_account"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,10 +61,11 @@
 
 
         <Button
+
             android:id="@+id/create_acct_button"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/beautybush"
+            android:backgroundTint="@color/juniper"
             android:text="@string/create_text"
             android:textColor="@color/beautybush"
             android:textStyle="bold" />

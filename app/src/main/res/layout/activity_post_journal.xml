@@ -113,7 +113,6 @@
         android:layout_marginBottom="76dp"
         android:backgroundTint="@color/juniper"
         android:text="@string/save_button"
-
         android:textColor="@color/beautybush"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

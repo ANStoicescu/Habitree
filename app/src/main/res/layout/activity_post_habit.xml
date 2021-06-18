@@ -5,83 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".PostHabitActivity">
+    tools:context=".PostHabitActivity"
+    android:background="@color/habitree">
 
     <TextView
+        android:textColor="#EEC3BD"
+        android:textColorHint ="#EEC3BD"
+        android:background="@color/juniper"
         android:id="@+id/textView"
         android:layout_width="186dp"
         android:layout_height="70dp"
+        android:layout_marginTop="68dp"
         android:gravity="center"
         android:text="The Habit:"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/HabitName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.639" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:textColor="#EEC3BD"
+        android:textColorHint ="#EEC3BD"
         android:id="@+id/HabitName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_width="260dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="44dp"
+        android:background="@color/juniper"
         android:ems="10"
+        android:gravity="center"
         android:hint="Name the habit"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/HabitDescription"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Notifications"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Everyday at:"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/timePicker"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TimePicker
-        android:id="@+id/timePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:timePickerMode="spinner"
-        app:layout_constraintBottom_toTopOf="@+id/btnDone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/HabitDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_width="258dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/juniper"
         android:ems="10"
+        android:gravity="center"
         android:hint="Describe the habit"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:textColor="#EEC3BD"
+        android:textColorHint="#EEC3BD"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HabitName" />
 
     <Button
+        android:backgroundTint="@color/juniper"
+        android:textColor="@color/beautybush"
         android:id="@+id/btnDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,7 +68,6 @@
         android:text="Done"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
