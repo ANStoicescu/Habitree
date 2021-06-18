@@ -24,7 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.habitree.models.Habit;
-import com.habitree.util.HabitApi;
+import com.habitree.util.Api;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -100,9 +100,9 @@ public class PostHabitActivity extends AppCompatActivity implements View.OnClick
         btnDone = findViewById(R.id.btnDone);
         btnDone.setOnClickListener(this);
 
-        if (HabitApi.getInstance() != null) {
-            currentUserId = HabitApi.getInstance().getUserId();
-            currentUserName = HabitApi.getInstance().getUsername();
+        if (Api.getInstance() != null) {
+            currentUserId = Api.getInstance().getUserId();
+            currentUserName = Api.getInstance().getUsername();
         }
 
         authStateListener = new FirebaseAuth.AuthStateListener() {
@@ -159,7 +159,7 @@ public class PostHabitActivity extends AppCompatActivity implements View.OnClick
 
                         }
                     });
-            //Todo: and save a Journal instance.
+            //Todo: and save a Habit instance.
         }
     }
 

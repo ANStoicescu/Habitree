@@ -30,7 +30,7 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.habitree.models.Journal;
-import com.habitree.util.JournalApi;
+import com.habitree.util.Api;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -120,9 +120,9 @@ public class PostJournalActivity extends AppCompatActivity implements View.OnCli
 
         progressBar.setVisibility(View.INVISIBLE);
 
-        if (JournalApi.getInstance() != null) {
-            currentUserId = JournalApi.getInstance().getUserId();
-            currentUserName = JournalApi.getInstance().getUsername();
+        if (Api.getInstance() != null) {
+            currentUserId = Api.getInstance().getUserId();
+            currentUserName = Api.getInstance().getUsername();
 
             currentUserTextView.setText(currentUserName);
         }

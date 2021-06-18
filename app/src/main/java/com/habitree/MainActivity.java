@@ -24,7 +24,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.habitree.accounts.LoginActivity;
 import com.habitree.notifications.AlarmNotificationReceiver;
-import com.habitree.util.JournalApi;
+import com.habitree.util.Api;
 
 import java.util.Calendar;
 import java.util.Objects;
@@ -71,9 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
                                     if (!queryDocumentSnapshots.isEmpty()) {
                                         for (QueryDocumentSnapshot snapshot : queryDocumentSnapshots) {
-                                            JournalApi journalApi = JournalApi.getInstance();
-                                            journalApi.setUserId(snapshot.getString("userId"));
-                                            journalApi.setUsername(snapshot.getString("username"));
+                                            Api api = Api.getInstance();
+                                            api.setUserId(snapshot.getString("userId"));
+                                            api.setUsername(snapshot.getString("username"));
 
                                             startActivity(new Intent(MainActivity.this,
                                                     HomeActivity.class));

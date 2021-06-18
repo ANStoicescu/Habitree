@@ -23,11 +23,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
 import com.habitree.models.Habit;
-import com.habitree.models.Journal;
 import com.habitree.ui.HabitRecyclerAdapter;
-import com.habitree.ui.JournalRecyclerAdapter;
-import com.habitree.util.HabitApi;
-import com.habitree.util.JournalApi;
+import com.habitree.util.Api;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -136,7 +133,7 @@ public class HabitActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        collectionReference.whereEqualTo("userId", HabitApi.getInstance()
+        collectionReference.whereEqualTo("userId", Api.getInstance()
                 .getUserId())
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {

@@ -24,7 +24,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
 import com.habitree.models.Journal;
 import com.habitree.ui.JournalRecyclerAdapter;
-import com.habitree.util.JournalApi;
+import com.habitree.util.Api;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -134,7 +134,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-        collectionReference.whereEqualTo("userId", JournalApi.getInstance()
+        collectionReference.whereEqualTo("userId", Api.getInstance()
                 .getUserId())
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {

@@ -22,16 +22,13 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.habitree.HomeActivity;
 import com.habitree.PostJournalActivity;
 import com.habitree.R;
-import com.habitree.util.JournalApi;
+import com.habitree.util.Api;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-
-import static androidx.core.content.ContextCompat.startActivity;
 
 public class CreateAccountActivity extends AppCompatActivity {
     private Button loginButton;
@@ -138,17 +135,15 @@ public class CreateAccountActivity extends AppCompatActivity {
                                                                     String name = task.getResult()
                                                                             .getString("username");
 
-                                                                    JournalApi journalApi = JournalApi.getInstance(); //Global API
-                                                                    journalApi.setUserId(currentUserId);
-                                                                    journalApi.setUsername(name);
+                                                                    Api api = Api.getInstance(); //Global API
+                                                                    api.setUserId(currentUserId);
+                                                                    api.setUsername(name);
 
                                                                     Intent intent = new Intent(CreateAccountActivity.this,
                                                                             PostJournalActivity.class);
                                                                     intent.putExtra("username", name);
                                                                     intent.putExtra("userId", currentUserId);
                                                                     startActivity(intent);
-
-
                                                                 }else {
 
                                                                     progressBar.setVisibility(View.INVISIBLE);

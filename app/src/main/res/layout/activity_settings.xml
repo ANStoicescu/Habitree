@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity">
+    tools:context=".SettingsActivity"
+    android:background="@color/habitree"
+    >
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -21,18 +23,61 @@
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/menu_navigation" />
 
+    <EditText
+        android:id="@+id/notif"
+        android:layout_width="260dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/juniper"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Pick a time for notifications"
+        android:inputType="textPersonName"
+        android:textColor="#EEC3BD"
+        android:textColorHint="#EEC3BD"
+        app:layout_constraintBottom_toTopOf="@+id/timePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TimePicker
+        android:background="@color/juniper"
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:timePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@+id/signout_bttn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/signout_bttn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Signout"
         android:textColor="@color/beautybush"
-
+        android:backgroundTint="@color/juniper"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.912" />
+
+    <Button
+        android:id="@+id/settime_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/juniper"
+        android:text="Set time"
+        android:textColor="@color/beautybush"
+        app:layout_constraintBottom_toTopOf="@+id/signout_bttn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.761" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
